@@ -1,5 +1,8 @@
 const initialState = {
-  userData: {},
+  userData: {
+    name: "Krishna",
+  },
+  isOkFine: "true",
 };
 
 export const userReducer = (state = initialState, action) => {
