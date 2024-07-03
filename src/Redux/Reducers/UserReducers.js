@@ -13,11 +13,18 @@ export const userReducer = (state = initialState, action) => {
         userData: action.data,
       };
     case "UPDATE_USER_DATA":
+      // return {
+      //   ...state,
+      //   userData: {
+      //     ...state.userData,
+      //     ...action.data,
+      //   },
+      // };
       return {
         ...state,
         userData: {
           ...state.userData,
-          ...action.data,
+          name: action.data,
         },
       };
     case "LOG_OUT":

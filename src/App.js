@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { updateUserData } from "./Redux/Actions/UserActions";
 
 function App() {
   const [name, setName] = useState();
@@ -15,7 +16,15 @@ function App() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button onClick={() => console.log(name)}>Submit</button>
+      <button
+        onClick={() =>
+          // Dispatch to dispatch or call an action in redux
+          // sending data
+          dispatch(updateUserData(name))
+        }
+      >
+        Submit
+      </button>
       <h1>{name}</h1>
       <h1>{userData?.userData?.name}</h1>
       <h1>{userData?.isOkFine}</h1>
