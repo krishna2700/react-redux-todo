@@ -4,6 +4,8 @@ const initialState = {
   todos: [{ name: "Redux", id: 1 }],
 };
 
+// Spreading is copying all the elements in an array or objects
+
 export const TodoReducers = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
